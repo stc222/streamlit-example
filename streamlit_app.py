@@ -1,10 +1,9 @@
 import pandas as pd
 import streamlit as st
+from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 
-titanic = pd.read_csv(
-    "https://github.com/datasciencedojo/datasets/blob/f0ccab6a7ceafdff780052166fb6fab3311398eb/titanic.csv"
-)
+titanic = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
 
 def aggrid_interactive_table(df: pd.DataFrame):
     """Creates an st-aggrid interactive table based on a dataframe.
@@ -35,7 +34,7 @@ def aggrid_interactive_table(df: pd.DataFrame):
 
 
 titanic = pd.read_csv(
-    "https://github.com/datasciencedojo/datasets/blob/f0ccab6a7ceafdff780052166fb6fab3311398eb/titanic.csv"
+    "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
 )
 
 selection = aggrid_interactive_table(df=titanic)
