@@ -3,6 +3,7 @@ import streamlit as st
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 
+st.title("Tatanic:Week 13 Assignment-Shangtong")
 titanic = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
 
 def aggrid_interactive_table(df: pd.DataFrame):
